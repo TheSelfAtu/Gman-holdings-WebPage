@@ -1,0 +1,233 @@
+body,
+html {
+    height: 100%;
+    font-family: "游ゴシック", "Yu Gothic";
+    font-weight: 500;
+
+}
+
+
+.cb-header {
+    position: fixed;
+    /* ヘッダーバーを固定 */
+    top: 0;
+    /* 上から0の位置に固定 */
+    left: 0;
+    /* 左から0の位置に固定 */
+    width: 100%;
+    /* 100%表示 */
+    display: none;
+    /*ヘッダーバーを非表示*/
+    z-index: 1000;
+    /*　他のアイテムに対して最上位のレイヤーになるように */
+    ;
+}
+
+/* ファストビュー */
+.first-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-size: cover;
+    position: relative;
+}
+
+.first-view img {
+    width: 100%;
+    height: auto;
+    opacity: 70%;
+}
+
+.first-view-text {
+    position: absolute;
+    font-size: 4vmin;
+    max-width: 80%;
+    padding: 1em;
+    border: 2px solid white;
+    text-align: center;
+    color: white;
+}
+
+/* それぞれの見出し */
+.content {
+    text-align: center;
+}
+
+.content img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* 動画編集・写真撮影など */
+.content h1 {
+    display: inline;
+    border-bottom: solid 2px #d8ccbb;
+
+}
+
+/* WORKSなどの見出し */
+.content h2 {
+    margin-bottom: 1em;
+
+    border-bottom: solid 3px #ffc778;
+    position: relative;
+}
+
+.content h2:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    border-bottom: solid 3px skyblue;
+    bottom: -3px;
+    width: 50%;
+}
+
+/* 画面遷移の際にnavが重ならないためのダミーの高さ */
+#news {
+    height: 17px;
+}
+
+/* NEWS部分 */
+.news p {
+    text-align: center;
+    border-bottom: 1px dotted black;
+
+}
+
+
+/* パソコンサイト用　パララックス */
+.parallax {
+    position: relative;
+    margin-bottom: 2em;
+    /* The image used */
+    background-image: url('../img/kachinode.png');
+    background-color: #000;
+    /* Full height */
+    height: 70%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.parallax .parallax-text {
+    max-height: 80%;
+    font-size: 10vmin;
+    position: absolute;
+    left: 10%;
+    bottom: 30%;
+    text-align: center;
+    color: rgb(248, 240, 240);
+
+}
+
+.parallax-text>span {
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+}
+
+/* スマホサイト用　パララックス＞画像 */
+.alt-parallax {
+    display: none;
+    position: relative;
+    background-color: black;
+    justify-content: start;
+    align-items: center;
+}
+
+.alt-parallax>img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    opacity: 80%;
+
+}
+
+.alt-parallax .alt-parallax-text {
+    max-height: 80%;
+    font-size: 10vmin;
+    position: absolute;
+    padding-left: 1rem;
+    color: #fff;
+
+}
+
+.alt-parallax-text>span {
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+}
+
+#emmoi-logo img {
+    margin-top: 1rem;
+    max-width: 60%;
+    margin-bottom: 1.2em;
+
+}
+
+.emmoi-text {
+    font-size: 4vmin;
+    text-align: center;
+
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr {
+    border-bottom: solid 2px white;
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+table th {
+    position: relative;
+    text-align: left;
+    width: 30%;
+    background-color: #52c2d0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table th:after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: calc(50% - 10px);
+    right: -10px;
+    border-left: 10px solid #52c2d0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+table td {
+    text-align: left;
+    width: 70%;
+    text-align: center;
+    background-color: #eee;
+    padding: 10px 0;
+}
+
+footer {
+    background-size: cover;
+    background-color: black;
+    color: white;
+}
